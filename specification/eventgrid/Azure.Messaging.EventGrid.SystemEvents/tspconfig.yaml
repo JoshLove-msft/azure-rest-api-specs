@@ -27,6 +27,7 @@ options:
     namespace: Azure.Messaging.EventGrid.SystemEvents
     model-namespace: false
     api-version: "2018-01-01"
+    unreferenced-types-handling: keepAll
   "@azure-tools/typespec-csharp":
     package-dir: Azure.Messaging.EventGrid.SystemEvents
     model-namespace: false
