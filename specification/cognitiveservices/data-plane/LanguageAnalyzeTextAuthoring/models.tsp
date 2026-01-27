@@ -1506,7 +1506,6 @@ model TextAnalysisAuthoringTrainingConfigVersion {
  * Represents a cell in a confusion matrix.
  */
 @clientName("TextAuthoringConfusionMatrixCell", "csharp")
-@usage(Usage.output, "csharp")
 model TextAnalysisAuthoringConfusionMatrixCell {
   /**
    * Represents normalized value in percentages.
