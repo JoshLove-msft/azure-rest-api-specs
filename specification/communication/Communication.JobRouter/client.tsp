@@ -145,6 +145,11 @@ interface JobRouterRestClient {
 }
 
 // Remove the leading "c" in the version enum identifiers for C#
-@@clientName(AzureCommunicationRoutingService.Versions.c2023_11_01, "2023_11_01", "csharp");
-@@clientName(AzureCommunicationRoutingService.Versions.c2024_01_18_Preview, "2024_01_18_Preview", "csharp");
-
+@@clientName(AzureCommunicationRoutingService.Versions.c2023_11_01,
+  "2023_11_01",
+  "csharp"
+);
+@@clientName(AzureCommunicationRoutingService.Versions.c2024_01_18_Preview,
+  "2024_01_18_Preview",
+  "csharp"
+);
