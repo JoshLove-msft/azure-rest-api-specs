@@ -11,6 +11,15 @@ model ApiErrorResponse {
   error: ApiError;
 }
 
+#suppress "@azure-tools/typespec-azure-core/experimental-feature" "Using experimental feature"
+@@copyProperties(OpenAI.Error,
+  {
+    details?: OpenAI.Error[],
+    additionalInfo?: Record<unknown>,
+    debugInfo?: Record<unknown>,
+  }
+);
+
 alias FoundryDataPlaneAzureTraits = SupportsClientRequestId &
   NoRepeatableRequests &
   NoConditionalRequests &
