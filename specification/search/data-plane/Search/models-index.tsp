@@ -491,6 +491,9 @@ model SearchOptions {
   filter?: string;
 
   /** The list of field names to use for hit highlights. Only searchable fields can be used for hit highlighting. */
+  #suppress "@azure-tools/typespec-azure-core/known-encoding" "Pre-existing API contract"
+  #suppress "@azure-tools/typespec-autorest/unknown-format" "Pre-existing API contract"
+  @encode(ArrayEncoding.commaDelimited)
   @query("highlight")
   highlightFields?: string[];
 
@@ -507,6 +510,9 @@ model SearchOptions {
   minimumCoverage?: float64;
 
   /** The list of OData $orderby expressions by which to sort the results. Each expression can be either a field name or a call to either the geo.distance() or the search.score() functions. Each expression can be followed by asc to indicate ascending, and desc to indicate descending. The default is ascending order. Ties will be broken by the match scores of documents. If no OrderBy is specified, the default sort order is descending by document match score. There can be at most 32 $orderby clauses. */
+  #suppress "@azure-tools/typespec-azure-core/known-encoding" "Pre-existing API contract"
+  #suppress "@azure-tools/typespec-autorest/unknown-format" "Pre-existing API contract"
+  @encode(ArrayEncoding.commaDelimited)
   @query("$orderby")
   orderBy?: string[];
 
@@ -524,6 +530,9 @@ model SearchOptions {
   scoringProfile?: string;
 
   /** The list of field names to which to scope the full-text search. When using fielded search (fieldName:searchExpression) in a full Lucene query, the field names of each fielded search expression take precedence over any field names listed in this parameter. */
+  #suppress "@azure-tools/typespec-azure-core/known-encoding" "Pre-existing API contract"
+  #suppress "@azure-tools/typespec-autorest/unknown-format" "Pre-existing API contract"
+  @encode(ArrayEncoding.commaDelimited)
   @query
   searchFields?: string[];
 
@@ -540,6 +549,9 @@ model SearchOptions {
   sessionId?: string;
 
   /** The list of fields to retrieve. If unspecified, all fields marked as retrievable in the schema are included. */
+  #suppress "@azure-tools/typespec-azure-core/known-encoding" "Pre-existing API contract"
+  #suppress "@azure-tools/typespec-autorest/unknown-format" "Pre-existing API contract"
+  @encode(ArrayEncoding.commaDelimited)
   @query("$select")
   select?: string[];
 
@@ -621,14 +633,23 @@ model SuggestOptions {
   minimumCoverage?: float64;
 
   /** The list of OData $orderby expressions by which to sort the results. Each expression can be either a field name or a call to either the geo.distance() or the search.score() functions. Each expression can be followed by asc to indicate ascending, or desc to indicate descending. The default is ascending order. Ties will be broken by the match scores of documents. If no $orderby is specified, the default sort order is descending by document match score. There can be at most 32 $orderby clauses. */
+  #suppress "@azure-tools/typespec-azure-core/known-encoding" "Pre-existing API contract"
+  #suppress "@azure-tools/typespec-autorest/unknown-format" "Pre-existing API contract"
+  @encode(ArrayEncoding.commaDelimited)
   @query("$orderby")
   orderBy?: string[];
 
   /** The list of field names to search for the specified search text. Target fields must be included in the specified suggester. */
+  #suppress "@azure-tools/typespec-azure-core/known-encoding" "Pre-existing API contract"
+  #suppress "@azure-tools/typespec-autorest/unknown-format" "Pre-existing API contract"
+  @encode(ArrayEncoding.commaDelimited)
   @query
   searchFields?: string[];
 
   /** The list of fields to retrieve. If unspecified, only the key field will be included in the results. */
+  #suppress "@azure-tools/typespec-azure-core/known-encoding" "Pre-existing API contract"
+  #suppress "@azure-tools/typespec-autorest/unknown-format" "Pre-existing API contract"
+  @encode(ArrayEncoding.commaDelimited)
   @query("$select")
   select?: string[];
 
